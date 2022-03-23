@@ -1,0 +1,15 @@
+{
+  "name": "alexdeovidal/crud",
+  "description": "Crud in PHP",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex de O. Vidal",
+      "email": "webav.com.br@gmail.com"
+    }
+  ],
+  "require": {
+    "PHP": ">=8.0"
+  }
+}

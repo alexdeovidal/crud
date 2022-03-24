@@ -1,4 +1,12 @@
 ## @Alexdeovidal\Crud
+In this package you have the complete command of your crud, simply create, read, update and delete your database, it is worth remembering that we used in the MariaDB example, but @Alexdeovidal\Crud can be used with several other banks because it uses PDO.
+
+[![Maintainer](http://img.shields.io/badge/maintainer-@alexdeovidal-blue.svg?style=flat-square)](https://twitter.com/alexdeovidal)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/alexdeovidal/crud.svg?style=flat-square)](https://packagist.org/packages/alexdeovidal/crud)
+[![Latest Version](https://img.shields.io/github/release/alexdeovidal/crud.svg?style=flat-square)](https://github.com/alexdeovidal/crud/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Quality Score](https://img.shields.io/scrutinizer/g/alexdeovidal/crud.svg?style=flat-square)](https://scrutinizer-ci.com/g/alexdeovidal/crud)
+[![Total Downloads](https://img.shields.io/packagist/dt/alexdeovidal/crud.svg?style=flat-square)](https://packagist.org/packages/alexdeovidal/crud)
 
 ## Installation
 

@@ -9,7 +9,13 @@
       "email": "webav.com.br@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "Alexdeovidal\\Crud\\": "src"
+    }
+  },
   "require": {
-    "PHP": ">=8.0"
+    "PHP": ">=8.0",
+    "ext-pdo": "*"
   }
 }

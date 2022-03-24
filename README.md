@@ -158,7 +158,7 @@ Read::setTable("users");
 Read::setData([
     "*"
 ]);
-$users = Read::find(columns:["name", "genre"], true);
+$users = Read::find(columns:["name", "genre"], all:true);
 foreach ($users as $user){
     echo "Nome: {$user->name} <br>";
     echo "Sexo: {$user->genre} <br>";

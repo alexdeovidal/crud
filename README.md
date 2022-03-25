@@ -24,6 +24,8 @@ composer require alexdeovidal/crud
 
 ## Documentation
 
+[![Video Documentation](https://github.com/alexdeovidal/crud/blob/main/youtube.png)](https://www.youtube.com/embed/DAZURz9f5kY)
+
 
 Create a file and define the constants example config.php and add it to the project:
 ```php 

@@ -2,52 +2,36 @@
 
 namespace Alexdeovidal\Crud;
 
-use PDOException;
+use JsonException;
 use PDO;
+use PDOException;
 
 /**
- * @Alexdeovidal\Crud
- * Class Conn
+ * Connection PDO
  */
 class Conn
 {
     /**
-     * @var PDO|null
+     * @var PDO
      */
-    protected static ?PDO $pdo = null;
-    /**
-     * @var PDOException|null
-     */
-    protected static ?PDOException $exception = null;
+    private static PDO $pdo;
 
     /**
-     * @return PDO|null
+     * connect pdo
+     * @throws JsonException
      */
-    public static function conn(): ?PDO
+    //PDO::FETCH_OBJ
+    public static function conn(): PDO
     {
-        if (!self::$pdo) {
+        if(!self::$pdo){
             try {
-                self::$pdo = (new PDO('mysql:host=' . CRUD_HOST . ';dbname=' . CRUD_DBASE . '', CRUD_USER, CRUD_PASS));
-                self::setAttribute();
-            } catch (PDOException $exception) {
-                self::$exception = $exception;
+                self::$pdo = new PDO(DB_DSN,DB_USER,DB_PASS);
+                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                self::$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+            }catch (PDOException $ex){
+                Resource::response(400, $ex->getMessage());
             }
         }
         return self::$pdo;
-    }
-
-    public static function error(): ?PDOException
-    {
-        return self::$exception;
-    }
-
-    /**
-     * setAttribute PDO
-     */
-    protected static function setAttribute(): void
-    {
-        self::$pdo?->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, "SET NAMES " . CRUD_ENCODE);
-        self::$pdo?->setAttribute(PDO::MYSQL_ATTR_FOUND_ROWS, true);
-        self::$pdo?->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 }

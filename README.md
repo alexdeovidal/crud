@@ -23,7 +23,7 @@ composer require alexdeovidal/crud
 ```
 
 ## Documentation
-
+###Watch the video of using this package
 [![Video Documentation](https://github.com/alexdeovidal/crud/blob/main/youtube.png)](https://www.youtube.com/embed/DAZURz9f5kY)
 
 
